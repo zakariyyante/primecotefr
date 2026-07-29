@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <%- include('partials/age-gate') %>
+  <%- include('partials/header') %>
+
+  <main class="py-20">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-black mb-12 text-gray-900 tracking-tight text-center">Notre Expertise & Méthode</h1>
+      
+      <div class="prose prose-lg text-gray-600 space-y-12 max-w-none">
+        <section>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Un espace d'information indépendant</h2>
+          <p class="text-xl leading-relaxed">
+            <%= site.fullSiteName %> se consacre à la clarté, la sécurité et la conformité, conformément aux règles de l'Autorité Nationale des Jeux (ANJ). Nous analysons les opérateurs et leurs offres pour le marché français afin de vous offrir une vision nette des services disponibles.
+          </p>
+        </section>
+
+        <section class="bg-white p-10 rounded-3xl border border-gray-200 shadow-sm">
+          <h2 class="text-2xl font-bold text-gray-900 mb-8">Pourquoi nous choisir ?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Sécurité et fiabilité</h3>
+              <p>Nous ne mettons en avant que des opérateurs encadrés, avec des licences vérifiables et des pratiques alignées sur le droit français.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Offres exclusives</h3>
+              <p>Promotions expliquées clairement : nous vous aidons à repérer les bonus réalistes et à éviter le marketing flou.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Transactions rapides</h3>
+              <p>Délais de retrait, moyens de paiement et plafonds : des critères concrets pour comparer au-delà du visuel.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Avis structurés</h3>
+              <p>Grille stable et tests reproductibles pour des fiches comparables, sans classement « magique ».</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Comment nous évaluons les opérateurs</h2>
+          <p class="mb-6">Une grille fixe pour des fiches comparables, moins de subjectivité, plus de repères :</p>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-lg mr-4 shrink-0">1</span>
+              <div>
+                <strong class="text-gray-900">Respect du cadre ANJ :</strong> Nous contrôlons la présence d'un agrément valide et la cohérence des messages avec les obligations françaises.
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-lg mr-4 shrink-0">2</span>
+              <div>
+                <strong class="text-gray-900">Lisibilité des offres :</strong> Conditions de mise, plafonds et durées sont résumés pour repérer vite les offres réalistes.
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-lg mr-4 shrink-0">3</span>
+              <div>
+                <strong class="text-gray-900">Support francophone :</strong> Disponibilité et clarté des réponses lorsque vous avez besoin d'aide concrète.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="bg-accent/5 p-8 rounded-3xl border border-accent/10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4 italic">Engagement Responsable</h2>
+          <p>
+            L'information est notre priorité, mais votre protection est notre devoir. Nous collaborons exclusivement avec des plateformes qui placent le jeu responsable au cœur de leur activité.
+          </p>
+        </section>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-gray-200">
+        <a href="/" class="inline-flex items-center text-accent font-bold hover:underline">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          Retour à l'accueil
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

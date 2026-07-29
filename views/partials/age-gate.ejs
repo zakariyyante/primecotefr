@@ -1,0 +1,40 @@
+<div id="age-gate" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-sm px-4">
+  <div class="bg-white rounded-2xl max-w-md w-full p-8 text-center shadow-2xl">
+    <div class="mb-6 inline-flex items-center justify-center w-20 h-20 bg-red-100 rounded-full text-red-600">
+      <span class="text-4xl font-bold">18+</span>
+    </div>
+    <h2 class="text-2xl font-extrabold text-gray-900 mb-4">Vérification d'âge requise</h2>
+    <p class="text-gray-600 mb-8 leading-relaxed">
+      Ce site propose du contenu lié aux jeux d'argent. Vous devez avoir au moins 18 ans pour continuer.
+      Le jeu comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le 09 74 75 13 13 (appel non surtaxé).
+    </p>
+    
+    <div class="grid grid-cols-1 gap-4 mb-8">
+      <button id="age-gate-accept" class="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-accent/20">
+        Oui, j'ai 18 ans ou plus
+      </button>
+      <a href="https://www.joueurs-info-service.fr" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-4 rounded-xl transition">
+        Non, je quitte
+      </a>
+    </div>
+
+    <div class="flex items-center justify-center space-x-6 pt-6 border-t border-gray-100">
+      <a href="https://www.begambleaware.org" target="_blank" class="text-xs text-gray-400 hover:text-accent font-medium uppercase tracking-wider">BeGambleAware</a>
+      <a href="https://www.gamcare.org.uk" target="_blank" class="text-xs text-gray-400 hover:text-accent font-medium uppercase tracking-wider">GamCare</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const ageGate = document.getElementById('age-gate');
+    const acceptBtn = document.getElementById('age-gate-accept');
+    
+    document.body.classList.add('no-scroll');
+    
+    acceptBtn.addEventListener('click', function() {
+      ageGate.style.display = 'none';
+      document.body.classList.remove('no-scroll');
+    });
+  })();
+</script>

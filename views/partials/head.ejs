@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= page.title %></title>
+<meta name="description" content="<%= page.description %>">
+<meta name="keywords" content="<%= page.keywords %>">
+<link rel="canonical" href="https://<%= site.domain %><%= page.path %>">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://<%= site.domain %><%= page.path %>">
+<meta property="og:title" content="<%= page.title %>">
+<meta property="og:description" content="<%= page.description %>">
+<meta property="og:image" content="https://<%= site.domain %>/favicon/android-chrome-512x512.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://<%= site.domain %><%= page.path %>">
+<meta property="twitter:title" content="<%= page.title %>">
+<meta property="twitter:description" content="<%= page.description %>">
+<meta property="twitter:image" content="https://<%= site.domain %>/favicon/android-chrome-512x512.png">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="theme-color" content="<%= site.themeColor %>">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          accent: '<%= site.themeColor %>',
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  [hidden] { display: none !important; }
+  .no-scroll { overflow: hidden; }
+</style>

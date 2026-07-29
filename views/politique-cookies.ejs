@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <%- include('partials/age-gate') %>
+  <%- include('partials/header') %>
+
+  <main class="py-20">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-4xl font-black mb-4">Politique relative aux Cookies</h1>
+      <p class="text-gray-500 mb-12">Dernière mise à jour : <%= today %></p>
+      
+      <div class="prose prose-lg text-gray-600 space-y-12">
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Définition</h2>
+          <p>
+            Les cookies sont de petits fichiers texte stockés sur votre appareil lors de la visite d'un site web. Ils permettent de reconnaître votre navigateur et de mémoriser certaines informations.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Finalités</h2>
+          <p>
+            Sur <%= site.fullSiteName %>, nous utilisons des cookies pour assurer le bon fonctionnement du site, mesurer l'audience et suivre les performances de nos liens d'affiliation.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Types de cookies utilisés</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement technique du site.</li>
+            <li><strong>Cookies analytiques :</strong> Pour comprendre comment les visiteurs utilisent le site.</li>
+            <li><strong>Cookies d'affiliation :</strong> Pour attribuer vos inscriptions aux opérateurs partenaires.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Gestion via le navigateur</h2>
+          <p>
+            Vous pouvez configurer votre navigateur pour bloquer les cookies ou vous alerter lorsqu'ils sont envoyés. Notez que certaines fonctionnalités du site pourraient ne pas fonctionner correctement sans cookies.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Contact</h2>
+          <p>
+            Pour toute question concernant notre utilisation des cookies, vous pouvez nous contacter à l'adresse suivante : <%= site.contactEmail %>
+          </p>
+        </section>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-gray-200">
+        <a href="/" class="inline-flex items-center text-accent font-bold hover:underline">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          Retour à l'accueil
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<footer class="bg-gray-900 text-white pt-20 pb-10">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div>
+        <a href="/" class="flex items-center space-x-1 text-3xl font-black tracking-tighter mb-4">
+          <span class="text-white"><%= site.wordmark.first %></span><span class="text-accent"><%= site.wordmark.second %></span><span class="text-gray-500">FR</span>
+        </a>
+        <div class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-6">
+          Comparatif France · 18+ · Jeu responsable · ANJ
+        </div>
+        <p class="text-gray-400 mb-8 leading-relaxed">
+          L'autorité de référence pour les utilisateurs exigeants en quête d'excellence et de sécurité sur le marché français.
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-bold mb-6">Navigation</h4>
+        <ul class="space-y-4">
+          <% site.footerNav.forEach(item => { %>
+            <li>
+              <a href="<%= item.path %>" class="text-gray-400 hover:text-white transition flex items-center <%= page.path === item.path ? 'text-white font-bold' : '' %>" <%= page.path === item.path ? 'aria-current="page"' : '' %>>
+                <span class="w-1.5 h-1.5 rounded-full bg-accent mr-3 <%= page.path === item.path ? 'opacity-100' : 'opacity-0' %>"></span>
+                <%= item.label %>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-bold mb-6">Légal</h4>
+        <ul class="space-y-4">
+          <% site.legalNav.forEach(item => { %>
+            <li>
+              <a href="<%= item.path %>" class="text-gray-400 hover:text-white transition flex items-center <%= page.path === item.path ? 'text-white font-bold' : '' %>" <%= page.path === item.path ? 'aria-current="page"' : '' %>>
+                <span class="w-1.5 h-1.5 rounded-full bg-accent mr-3 <%= page.path === item.path ? 'opacity-100' : 'opacity-0' %>"></span>
+                <%= item.label %>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-bold mb-6">Organismes de soutien</h4>
+        <div class="grid grid-cols-2 gap-4">
+          <% site.regulatorBadges.forEach(badge => { %>
+            <a href="<%= badge.href %>" target="_blank" rel="noopener noreferrer" class="bg-gray-800 p-3 rounded-lg flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition group">
+              <% if (badge.logoImage) { %>
+                <img src="<%= badge.logoImage %>" alt="<%= badge.label %>" class="h-8 w-auto object-contain pointer-events-none">
+              <% } else { %>
+                <span class="text-[10px] font-bold text-center text-gray-400 group-hover:text-white"><%= badge.label %></span>
+              <% } %>
+            </a>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 pt-10 text-center">
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <p class="text-gray-500 text-sm italic mb-4 text-balance">
+          Attention : Le jeu comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le <%= site.helpline.phone %> (appel non surtaxé).
+        </p>
+        <p class="text-gray-600 text-xs">
+          &copy; <span id="year"></span> <%= site.fullSiteName %> - Tous droits réservés. Les bonus et offres sont soumis à conditions.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
