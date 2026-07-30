@@ -17,15 +17,15 @@ module.exports = [
   {
     rank: 2,
     name: "Bwin",
-    url: "https://www.bwin.fr/",
+    url: "https://mediaserver.entainpartners.com/renderBanner.do?zoneId=2159573&clickid=",
     logoImage: "/images/logos/bwin.png",
     logoBg: "dark",
     badgeText: "N°2",
     bonusLabel: "Bonus de Bienvenue",
-    bonusValue: "100% jusqu'à 120€",
+    bonusValue: "Votre mise remboursée jusqu'à 100€",
     rating: "9.7",
     ctaLabel: "Visiter Bwin",
-    ctaUrl: "https://www.bwin.fr/",
+    ctaUrl: "https://mediaserver.entainpartners.com/renderBanner.do?zoneId=2159573&clickid=",
     disclaimer: "18+ | CGU applicables | Jeu responsable. Offre soumise à conditions de mise et validité.",
     active: true
   }
